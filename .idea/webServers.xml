@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b11c6a4b-184c-420c-bd15-8adcb20c4971" name="40.115.36.79">
+        <fileTransfer rootFolder="/home/azureuser/cmpe494" accessType="SFTP" host="40.115.36.79" port="22" sshConfigId="57b7f465-9c81-423d-baf7-3c3782023b7e" sshConfig="azureuser@40.115.36.79:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
