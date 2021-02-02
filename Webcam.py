@@ -11,7 +11,7 @@ def webcam():
     while i < 3:
         i += 1
         ret, frame = vid.read()
-        time.sleep(1.2)
+        time.sleep(2.0)
 
         encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
         result, code = cv2.imencode('.jpg', frame, encode_param)

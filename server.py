@@ -2,8 +2,6 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import os
 
-from os.path import join, dirname, realpath, abspath
-
 app = Flask(__name__)
 
 
@@ -23,15 +21,8 @@ def my_form_post():
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 UPLOAD_FOLDER = 'static/'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
